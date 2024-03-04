@@ -1,0 +1,59 @@
+_______________________________________________________________________________________________________________________________________
+Licence for components created by Jonathan Magson
+_________________________________________________________________________________________________
+
+
+MIT License
+
+Copyright (c) 2024 Jonathan Magson
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+_________________________________________________________________________________________________
+ArcPro to Google Earth licence.
+The GE sync functionality in this add-in is simply an updated version of Chris Staytes original add-in. I adjusted their code to make it work with ArcGIS Pro 3.1.
+https://github.com/chrisstayte/ArcPro_To_GoogleEarth
+
+ Here is the MIT licence for it:
+_________________________________________________________________________________________________
+
+The MIT License (MIT)
+
+Copyright (c) 2016 Chris Stayte
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+_________________________________________________________________________________________________
+Icon acknowledgement.
+_________________________________________________________________________________________________
+Thanks to the following authors whos open-source icons were used for this add-in
+
+
+OpenInGE icon: Solar Icons https://www.svgrepo.com/svg/523059/target
+SyncToGE: <a href="https://www.flaticon.com/free-icons/ecology-and-environment" title="ecology and environment icons">Ecology and environment icons created by Uniconlabs - Flaticon</a>
+Feature to GE icon: Deisgned by Freepick https://www.freepik.com/
+Toggle NVDI icon: <a href="https://www.flaticon.com/free-icons/numbers" title="numbers icons">Numbers icons created by riajulislam - Flaticon</a>
+OpenInMaps icon: <a href="https://www.flaticon.com/free-icons/location" title="location icons">Location icons created by IconMarketPK - Flaticon</a>
+OpenInStreet: <a href="https://www.flaticon.com/free-icons/street-view" title="street view icons">Street view icons created by juicy_fish - Flaticon</a>
