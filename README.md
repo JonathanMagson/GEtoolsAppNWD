@@ -6,7 +6,7 @@
 
 **OpenInGE:** This tool allows you to view the location of a mouse click in Google Earth Pro. Simply click on the map at the desired location, and the tool will generate a KML file with the coordinates and open it in Google Earth Pro automatically. It creates a kml file in ‘User\Documents\OpenInGE_kml_temp’ then opens it with Google Earth Pro, as long as it is the default program for opening KML files. SyncToGE must be deactivated for this tool to function correctly.
 
-**SyncToGE:** SyncToGE synchronizes the view of ArcGIS Pro with Google Earth Pro. This tool ensures that the extent and orientation of your map in ArcGIS Pro match those in Google Earth Pro, providing seamless integration between the two applications. This tool was originall created by Chris Stayte, I have updated it to work with ArcGIS PRo 3.1. See licence text file for the licence.
+**SyncToGE:** SyncToGE synchronizes the view of ArcGIS Pro with Google Earth Pro. This tool ensures that the extent and orientation of your map in ArcGIS Pro match those in Google Earth Pro, providing seamless integration between the two applications. This tool was originall created by Chris Stayte, I have updated it to work with ArcGIS PRo 3.1. 
 
 **LayerToGE**: With LayerToGE, you can open a feature class from ArcGIS Pro directly in Google Earth Pro. Select the desired feature class from the Contents pane, then click the LayerToGE button to export and open it in Google Earth Pro. It creates a kml file in ‘User\Documents\OpenInGE_kml_temp’ then opens it with Google Earth Pro, as long as it is the default program for opening KML files
 
@@ -23,5 +23,4 @@
 4. Access tools in the Add-in ribbon
 
 
-
-See Licence.txt for acknowledgement of icons and licences used for this plugin.
+See LICENCE for  licences and acknowledgement for this plugin, including the MIT licence for Chris Stayte's original add-in.
