@@ -25,3 +25,15 @@
 
 
 See LICENCE for  licences and acknowledgement for this plugin, including the MIT licence for Chris Stayte's original add-in.
+
+**Recomended resources for gettign started on ArcGIS Pro SDK:**
+
+https://www.youtube.com/watch?v=70niqCcVAZM
+
+https://www.youtube.com/watch?v=3iL5g9OIafY
+
+https://www.youtube.com/watch?v=LDnS6JWaZXM&t=1165s
+
+https://www.youtube.com/watch?v=rrtK42bt40w
+
+https://www.youtube.com/watch?v=0HuXF_lJY0o&t=921s
