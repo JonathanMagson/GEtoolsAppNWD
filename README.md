@@ -22,7 +22,7 @@
 1. download 'GEtools.esriAddinX'
 2. run the .esriAddinX file and install addon
 3. Restart ArcGis Pro.
-4. Access tools in the Add-in ribbon
+4. Access tools in the Add-in ribbon or by right-clicking on the map
 5. Configure Google Earth. Go to Tools > Options > Navigation > Change the Fly-To Speed to 5
 
 
