@@ -1,6 +1,6 @@
 # GEtoolsNWD
 
-Download: https://github.com/JonathanMagson/GEtoolsAppNWDversion/blob/1cdcdc4f10b2faf804dddc10dda70d3d91bdeb43/GEtools.esriAddinX
+**Download:** https://github.com/JonathanMagson/GEtoolsAppNWDversion/blob/1cdcdc4f10b2faf804dddc10dda70d3d91bdeb43/GEtools.esriAddinX
 
 **minimum ArcGIS Pro version required:** 3.1.41833
 
