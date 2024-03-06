@@ -44,7 +44,7 @@ namespace GEtools
 
         }
 
-        private void SaveCoordinatesAsKml(double latitude, double longitude)
+        public void SaveCoordinatesAsKml(double latitude, double longitude)
         {
             try
             {

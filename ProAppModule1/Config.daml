@@ -1,7 +1,7 @@
 ﻿<ArcGIS defaultAssembly="GEtools.dll" defaultNamespace="GEtools" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
   <AddInInfo id="{28e1240f-2b4b-4b2d-9e68-39b63932d487}" version="1.0" desktopVersion="3.1.41833">
     <Name>GEtools</Name>
-    <Description>Set of google tools for arcgis pro</Description>
+    <Description>Set of google tools for ArcGIS Pro</Description>
     <Image>Images\AddinDesktop32.png</Image>
     <Author>Jonathan Magson</Author>
     <Company>Department of Climate Change, Energy, the Environment and Water</Company>
@@ -24,39 +24,69 @@
         <group id="GEtools_Group1" caption="GEtools" appearsOnAddInTab="true">
           <!-- host controls within groups -->
           <tool refID="GEtools_OpenInGE" size="large" />
-		  <button refID="GEtools_SyncGE" size="large" />
+          <button refID="GEtools_SyncGE" size="large" />
           <button refID="GEtools_LayerToGE" size="large" />
           <tool refID="GEtools_OpenInMaps" size="large" />
           <tool refID="GEtools_OpenInStreet" size="large" />
-		  <button refID="GEtools_ToggleNVDI" size="large" />
+          <button refID="GEtools_ToggleNVDI" size="large" />
         </group>
       </groups>
       <controls>
         <!-- Add your existing controls here -->
-        <tool id="GEtools_OpenInGE" caption="OpenInGE" className="OpenInGE" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/icon.png" largeImage="pack://application:,,,/ProAppModule1;component/Images/icon.png" condition="esri_mapping_mapPane">
-          <tooltip heading="OpenInGE">
+        <tool id="GEtools_OpenInGE" caption="OpenInGE" className="OpenInGE" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/icon.png" largeImage="pack://application:,,,/GEtools;component/Images/icon.png" condition="esri_mapping_mapPane">
+          <tooltip heading="Open In Google Earth Pro">
 						Opens the location of mouse click in Google Earth Pro.<disabledText /></tooltip>
         </tool>
-        <button id="GEtools_LayerToGE" caption="LayerToGE" className="LayerToGE" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/earth_icon.png">
+        <button id="GEtools_LayerToGE" caption="LayerToGE" className="LayerToGE" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/earth_icon.png" largeImage="pack://application:,,,/GEtools;component/Images/earth_icon.png">
           <tooltip heading="Layer to GE">
 						Opens a feature class in Google Earth Pro<disabledText /></tooltip>
         </button>
-        <button id="GEtools_ToggleNVDI" caption="Toggle NVDI" className="ToggleNVDI" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/number-1.png" largeImage="pack://application:,,,/ProAppModule1;component/Images/number-1.png">
+        <button id="GEtools_ToggleNVDI" caption="Toggle NVDI" className="ToggleNVDI" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/number-1.png" largeImage="pack://application:,,,/GEtools;;component/Images/number-1.png">
           <tooltip heading="Toggle NVDI">
 						Toggles on and off the NVDI layer. Requires a layer named 'NVDI' in layer panel<disabledText /></tooltip>
         </button>
-        <tool id="GEtools_OpenInMaps" caption="OpenInMaps" className="OpenInMaps" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/location-pin.png" largeImage="pack://application:,,,/ProAppModule1;component/Images/location-pin.pn" condition="esri_mapping_mapPane">
-          <tooltip heading="penInMaps">
-			  Opens the location of mouse click in browser on google maps<disabledText /></tooltip>
+        <tool id="GEtools_OpenInMaps" caption="OpenInMaps" className="OpenInMaps" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/location-pin.png" largeImage="pack://application:,,,/GEtools;;component/Images/location-pin.pn" condition="esri_mapping_mapPane">
+          <tooltip heading="Open in Google Maps">
+						Opens the location of mouse click in browser on Google Maps<disabledText /></tooltip>
         </tool>
-        <tool id="GEtools_OpenInStreet" caption="OpenInStreet" className="OpenInStreet" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/street-view.png" largeImage="pack://application:,,,/ProAppModule1;component/Images/street-view.png" condition="esri_mapping_mapPane">
-          <tooltip heading="OpenInStreet">
-			  Opens the location of mouse click in browser with Street View on google maps<disabledText /></tooltip>
+        <tool id="GEtools_OpenInStreet" caption="OpenInStreet" className="OpenInStreet" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/street-view.png" largeImage="pack://application:,,,/GEtools;;component/Images/street-view.png" condition="esri_mapping_mapPane">
+          <tooltip heading="Open In Google Street View">
+						Opens the location of mouse click in browser with Street View on Google Maps<disabledText /></tooltip>
         </tool>
-        <button id="GEtools_SyncGE" caption="SyncToGE" className="SyncGE" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/sync-icon.png" largeImage="pack://application:,,,/ProAppModule1;component/Images/sync-icon.png">
-          <tooltip heading="SyncToGE">Syncs ArcGIS Pro map with Google Earth Pro <disabledText /></tooltip>
+        <button id="GEtools_SyncGE" caption="SyncToGE" className="SyncGE" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/sync-icon.png" largeImage="pack://application:,,,/GEtools;;component/Images/sync-icon.png">
+          <tooltip heading="SyncToGE">
+						Syncs ArcGIS Pro map with Google Earth Pro<disabledText /></tooltip>
         </button>
+        <button id="GEtools_OpenInGEcontext" caption="OpenInGE" className="OpenInGEcontext" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/icon.png" largeImage="pack://application:,,,/GEtools;component/Images/icon.png">
+          <tooltip heading="Open In Google Earth Pro">
+			  Opens the location of mouse click in Google Earth Pro.<disabledText /></tooltip>
+        </button>
+        <button id="GEtools_OpenInMapsContext" caption="OpenInMaps" className="OpenInMapsContext" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/location-pin.png" largeImage="pack://application:,,,/GEtools;component/Images/location-pin.png">
+          <tooltip heading="Open in Google Maps">
+			  Opens the location of mouse click in browser on Google Maps<disabledText /></tooltip>
+        </button>
+		<button id="GEtools_OpenInStreetContext" caption="OpenInStreet" className="OpenInStreetContext" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/street-view.png" largeImage="pack://application:,,,/GEtools;component/Images/street-view.png">
+			<tooltip heading="Open In Google Street View">
+				Opens the location of mouse click in browser with Street View on Google Maps<disabledText />
+			</tooltip>
+		</button>
       </controls>
     </insertModule>
-  </modules>
+    <updateModule refID="esri_mapping">
+      <menus>
+        <updateMenu refID="esri_mapping_selection2DContextMenu">
+          <insertButton refID="GEtools_OpenInGEcontext" placeWith="esri_mapping_locateReverseGeocode" />
+          <insertButton refID="GEtools_OpenInMapsContext" placeWith="esri_mapping_locateReverseGeocode" />
+		    <insertButton refID="GEtools_OpenInStreetContext" placeWith="esri_mapping_locateReverseGeocode" />
+			<insertButton refID="GEtools_SyncGE" placeWith="esri_mapping_locateReverseGeocode" />
+        </updateMenu>
+        <updateMenu refID="esri_mapping_popupToolContextMenu">
+          <insertButton refID="GEtools_OpenInGEcontext" placeWith="esri_mapping_locateReverseGeocode" />
+          <insertButton refID="GEtools_OpenInMapsContext" placeWith="esri_mapping_locateReverseGeocode" />
+			<insertButton refID="GEtools_OpenInStreetContext" placeWith="esri_mapping_locateReverseGeocode" />
+			<insertButton refID="GEtools_SyncGE" placeWith="esri_mapping_locateReverseGeocode" />
+        </updateMenu>
+      </menus>
+    </updateModule>‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍
+	</modules>
 </ArcGIS>
