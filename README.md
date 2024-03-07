@@ -1,4 +1,6 @@
-# GEtoolsNWDversion
+# GEtoolsNWD
+
+**Download:** https://github.com/JonathanMagson/GEtoolsAppNWDversion/blob/1cdcdc4f10b2faf804dddc10dda70d3d91bdeb43/GEtools.esriAddinX
 
 **minimum ArcGIS Pro version required:** 3.1.41833
 
@@ -20,20 +22,10 @@
 1. download 'GEtools.esriAddinX'
 2. run the .esriAddinX file and install addon
 3. Restart ArcGis Pro.
-4. Access tools in the Add-in ribbon
+4. Access tools in the Add-in ribbon or by right-clicking on the map
 5. Configure Google Earth. Go to Tools > Options > Navigation > Change the Fly-To Speed to 5
 
 
 See LICENCE for  licences and acknowledgement for this plugin, including the MIT licence for Chris Stayte's original add-in.
 
-**Recomended resources for getting started on ArcGIS Pro SDK for making add-ins:**
 
-https://www.youtube.com/watch?v=70niqCcVAZM
-
-https://www.youtube.com/watch?v=3iL5g9OIafY
-
-https://www.youtube.com/watch?v=LDnS6JWaZXM&t=1165s
-
-https://www.youtube.com/watch?v=rrtK42bt40w
-
-https://www.youtube.com/watch?v=0HuXF_lJY0o&t=921s
