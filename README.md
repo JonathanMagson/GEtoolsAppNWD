@@ -2,6 +2,8 @@
 
 **Download:** https://github.com/JonathanMagson/GEtoolsAppNWDversion/blob/0f8ee671d33b9c1f6b470c47a7af3817dde26e8f/GEtools.esriAddinX
 
+![image](https://github.com/JonathanMagson/GEtoolsAppNWDversion/assets/162064664/cf05c4e2-8419-4e62-aa3a-cc8bc3627de0)
+
 **minimum ArcGIS Pro version required:** 3.1.41833
 
 ﻿Add-in has only been tested on windows. This is the NWD version with custom tools for non-woody-disturbance workflows.
