@@ -2,7 +2,9 @@
 
 **Download:** https://github.com/JonathanMagson/GEtoolsAppNWDversion/blob/0f8ee671d33b9c1f6b470c47a7af3817dde26e8f/GEtools.esriAddinX
 
+
 ![image](https://github.com/JonathanMagson/GEtoolsAppNWDversion/assets/162064664/cf05c4e2-8419-4e62-aa3a-cc8bc3627de0)
+
 
 **minimum ArcGIS Pro version required:** 3.1.41833
 
@@ -20,7 +22,7 @@
 
 **Toggle NVDI:** Toggle NVDI allows you to quickly switch the display of the NVDI layer on and off. Ensure you have a layer named 'NVDI' in the map's layer panel to use this feature.
 
-**Installation**
+**Usage**
 1. download 'GEtools.esriAddinX'
 2. run the .esriAddinX file and install addon
 3. Restart ArcGis Pro.
@@ -28,6 +30,16 @@
 5. Configure Google Earth. Go to Tools > Options > Navigation > Change the Fly-To Speed to 5
 
 
-See LICENCE for  licences and acknowledgement for this plugin, including the MIT licence for Chris Stayte's original add-in.
+Accessing the tools via add-in ribbon
+
+![image](https://github.com/JonathanMagson/GEtoolsAppNWDversion/assets/162064664/3a3242b3-7d09-478e-afc0-d3d5c56b2e58)
+
+Accessing the tools via right-click on map context menu using explorer tool or selection tool
+
+
+![image](https://github.com/JonathanMagson/GEtoolsAppNWDversion/assets/162064664/7ef51fb7-6a2c-45ad-9908-22d11659aa8d)
+
+
+See LICENCE for licences and acknowledgements for this plugin, including the MIT licence for Chris Stayte's original add-in.
 
 
