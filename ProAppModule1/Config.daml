@@ -33,7 +33,7 @@
       </groups>
       <controls>
         <!-- Add your existing controls here -->
-        <tool id="GEtools_OpenInGE" caption="OpenInGE" className="OpenInGE" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/icon.png" largeImage="pack://application:,,,/GEtools;component/Images/icon.png" condition="esri_mapping_mapPane">
+        <tool id="GEtools_OpenInGE" caption="OpenInGE" className="OpenInGE" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/icon.png" largeImage="pack://application:,,,/GEtools;component/Images/icon.png">
           <tooltip heading="Open In Google Earth Pro">
 						Opens the location of mouse click in Google Earth Pro.<disabledText /></tooltip>
         </tool>
@@ -65,26 +65,26 @@
           <tooltip heading="Open in Google Maps">
 			  Opens the location of mouse click in browser on Google Maps<disabledText /></tooltip>
         </button>
-		<button id="GEtools_OpenInStreetContext" caption="OpenInStreet" className="OpenInStreetContext" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/street-view.png" largeImage="pack://application:,,,/GEtools;component/Images/street-view.png">
-			<tooltip heading="Open In Google Street View">
-				Opens the location of mouse click in browser with Street View on Google Maps<disabledText />
-			</tooltip>
-		</button>
+        <button id="GEtools_OpenInStreetContext" caption="OpenInStreet" className="OpenInStreetContext" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/street-view.png" largeImage="pack://application:,,,/GEtools;component/Images/street-view.png">
+          <tooltip heading="Open In Google Street View">
+				Opens the location of mouse click in browser with Street View on Google Maps<disabledText /></tooltip>
+        </button>
       </controls>
     </insertModule>
+    <!--Note: "updateModule" tag should be within the "modules" tag-->
     <updateModule refID="esri_mapping">
       <menus>
         <updateMenu refID="esri_mapping_selection2DContextMenu">
           <insertButton refID="GEtools_OpenInGEcontext" placeWith="esri_mapping_locateReverseGeocode" />
           <insertButton refID="GEtools_OpenInMapsContext" placeWith="esri_mapping_locateReverseGeocode" />
-		    <insertButton refID="GEtools_OpenInStreetContext" placeWith="esri_mapping_locateReverseGeocode" />
-			<insertButton refID="GEtools_SyncGE" placeWith="esri_mapping_locateReverseGeocode" />
+          <insertButton refID="GEtools_OpenInStreetContext" placeWith="esri_mapping_locateReverseGeocode" />
+          <insertButton refID="GEtools_SyncGE" placeWith="esri_mapping_locateReverseGeocode" />
         </updateMenu>
         <updateMenu refID="esri_mapping_popupToolContextMenu">
           <insertButton refID="GEtools_OpenInGEcontext" placeWith="esri_mapping_locateReverseGeocode" />
           <insertButton refID="GEtools_OpenInMapsContext" placeWith="esri_mapping_locateReverseGeocode" />
-			<insertButton refID="GEtools_OpenInStreetContext" placeWith="esri_mapping_locateReverseGeocode" />
-			<insertButton refID="GEtools_SyncGE" placeWith="esri_mapping_locateReverseGeocode" />
+          <insertButton refID="GEtools_OpenInStreetContext" placeWith="esri_mapping_locateReverseGeocode" />
+          <insertButton refID="GEtools_SyncGE" placeWith="esri_mapping_locateReverseGeocode" />
         </updateMenu>
       </menus>
     </updateModule>‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍

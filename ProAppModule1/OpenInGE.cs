@@ -20,6 +20,7 @@ namespace GEtools
         }
 
         protected override void OnToolMouseDown(MapViewMouseButtonEventArgs e)
+
         {
             if (e.ChangedButton == System.Windows.Input.MouseButton.Left)
                 e.Handled = true;
