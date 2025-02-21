@@ -10,7 +10,7 @@
 
 The Add-in has only been tested on Windows.
 
-In newer versions of ArcGIS PRo (3.2+), you may need to update Microsoft .NET Desktop Runtime to a minimum of version 8.0.x (x64)
+In newer versions of ArcGIS PRo (3.3+), you may need to update Microsoft .NET Desktop Runtime to a minimum of version 8.0.x (x64)
 
 **OpenInGE:** This tool allows you to view the location of a mouse click in Google Earth Pro. Simply click on the map at the desired location, and the tool will generate a KML file with the coordinates and open it in Google Earth Pro automatically. It creates a kml file in ‘User\Documents\OpenInGE_kml_temp’ then opens it with Google Earth Pro, as long as it is the default program for opening KML files. SyncToGE must be deactivated for this tool to function correctly.
 
