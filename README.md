@@ -1,7 +1,10 @@
 # GEtools
 
-**Download:** https://github.com/JonathanMagson/GEtoolsAppNWDversion/blob/0f8ee671d33b9c1f6b470c47a7af3817dde26e8f/GEtools.esriAddinX
+**Download ArcPro 3.3:** [https://github.com/JonathanMagson/GEtoolsAppNWDversion/blob/0f8ee671d33b9c1f6b470c47a7af3817dde26e8f/GEtools.esriAddinX
+](https://github.com/JonathanMagson/GEtoolsAppNWD/blob/master/GEtoolsArcProV3_3.esriAddinX)
 
+**Download ArcPro 3.3:** [https://github.com/JonathanMagson/GEtoolsAppNWDversion/blob/0f8ee671d33b9c1f6b470c47a7af3817dde26e8f/GEtools.esriAddinX
+](https://github.com/JonathanMagson/GEtoolsAppNWD/blob/master/GEtoolsArcProV3_3.esriAddinX)
 
 ![image](https://github.com/JonathanMagson/GEtoolsAppNWDversion/assets/162064664/cf05c4e2-8419-4e62-aa3a-cc8bc3627de0)
 
