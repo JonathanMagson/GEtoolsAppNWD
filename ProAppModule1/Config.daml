@@ -1,5 +1,5 @@
 ﻿<ArcGIS defaultAssembly="GEtools.dll" defaultNamespace="GEtools" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
-  <AddInInfo id="{28e1240f-2b4b-4b2d-9e68-39b63932d487}" version="1.0" desktopVersion="3.1.41833">
+  <AddInInfo id="{28e1240f-2b4b-4b2d-9e68-39b63932d487}" version="1.0" desktopVersion="3.3.0">
     <Name>GEtools</Name>
     <Description>Set of google tools for ArcGIS Pro</Description>
     <Image>Images\AddinDesktop32.png</Image>
@@ -40,10 +40,6 @@
         <button id="GEtools_LayerToGE" caption="LayerToGE" className="LayerToGE" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/earth_icon.png" largeImage="pack://application:,,,/GEtools;component/Images/earth_icon.png">
           <tooltip heading="Layer to GE">
 						Opens a feature class in Google Earth Pro<disabledText /></tooltip>
-        </button>
-        <button id="GEtools_ToggleNVDI" caption="Toggle NVDI" className="ToggleNVDI" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/number-1.png" largeImage="pack://application:,,,/GEtools;;component/Images/number-1.png">
-          <tooltip heading="Toggle NVDI">
-						Toggles on and off the NVDI layer. Requires a layer named 'NVDI' in layer panel<disabledText /></tooltip>
         </button>
         <tool id="GEtools_OpenInMaps" caption="OpenInMaps" className="OpenInMaps" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/location-pin.png" largeImage="pack://application:,,,/GEtools;;component/Images/location-pin.pn" condition="esri_mapping_mapPane">
           <tooltip heading="Open in Google Maps">

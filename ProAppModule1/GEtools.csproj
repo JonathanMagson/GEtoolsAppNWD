@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <UseWPF>true</UseWPF>
     <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
@@ -26,9 +26,6 @@
     <Resource Include="Images\location-pin.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\number-1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Images\street-view.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -43,7 +40,6 @@
     <None Remove="Images\earth_icon.png" />
     <None Remove="Images\icon.png" />
     <None Remove="Images\location-pin.png" />
-    <None Remove="Images\number-1.png" />
     <None Remove="Images\street-view.png" />
     <None Remove="Images\sync-icon.png" />
     <None Remove="Licence.txt" />
