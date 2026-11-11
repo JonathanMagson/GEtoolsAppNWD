@@ -1,5 +1,7 @@
 # GEtools
 
+**Download ArcPro 3.5 + version:** https://github.com/JonathanMagson/GEtoolsAppNWD/blob/master/GEtoolsArcProV3_5.esriAddinX
+
 **Download ArcPro 3.3 + version:** [https://github.com/JonathanMagson/GEtoolsAppNWDversion/blob/0f8ee671d33b9c1f6b470c47a7af3817dde26e8f/GEtools.esriAddinX
 ](https://github.com/JonathanMagson/GEtoolsAppNWD/blob/master/GEtoolsArcProV3_3.esriAddinX)
 
