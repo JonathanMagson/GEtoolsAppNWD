@@ -1,5 +1,7 @@
 # GEtools
 
+**Download ArcPro 3.5 + version:** https://github.com/JonathanMagson/GEtoolsAppNWD/blob/master/GEtoolsArcProV3_5.esriAddinX
+
 **Download ArcPro 3.3 + version:** [https://github.com/JonathanMagson/GEtoolsAppNWDversion/blob/0f8ee671d33b9c1f6b470c47a7af3817dde26e8f/GEtools.esriAddinX
 ](https://github.com/JonathanMagson/GEtoolsAppNWD/blob/master/GEtoolsArcProV3_3.esriAddinX)
 
@@ -25,8 +27,6 @@ For this feature to work correctly you need to change GE settings: Go to Tools >
 **OpenInMaps:** OpenInMaps tool enables you to view the location of a mouse click in a web browser using Google Maps. Simply click on the map at the desired location, and the tool will open Google Maps in your default browser with the clicked location.
 
 **OpenInStreet:** OpenInStreet provides a convenient way to view the location of a mouse click in a web browser using Google Street View. Click on the map at the desired location, and the tool will open Google Street View in your default browser with the clicked location.
-
-**Toggle NVDI:** Toggle NVDI allows you to quickly switch the display of the NVDI layer on and off. Ensure you have a layer named 'NVDI' in the map's layer panel to use this feature.
 
 **Usage**
 1. download 'GEtools.esriAddinX'

@@ -11,7 +11,7 @@
                     Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
   </AddInInfo>
   <modules>
-    <insertModule id="GEtoolsModule" className="GEtools" autoLoad="true" caption="GEtools">
+    <insertModule id="GEtoolsModule" className="GEtoolsModule" autoLoad="true" caption="GEtools">
       <!-- uncomment to have the control hosted on a separate tab-->
       <tabs>
         <!--<tab id="ProAppModule1_Tab1" caption="New Tab">
@@ -28,7 +28,6 @@
           <button refID="GEtools_LayerToGE" size="large" />
           <tool refID="GEtools_OpenInMaps" size="large" />
           <tool refID="GEtools_OpenInStreet" size="large" />
-          <button refID="GEtools_ToggleNVDI" size="large" />
         </group>
       </groups>
       <controls>
@@ -41,15 +40,15 @@
           <tooltip heading="Layer to GE">
 						Opens a feature class in Google Earth Pro<disabledText /></tooltip>
         </button>
-        <tool id="GEtools_OpenInMaps" caption="OpenInMaps" className="OpenInMaps" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/location-pin.png" largeImage="pack://application:,,,/GEtools;;component/Images/location-pin.pn" condition="esri_mapping_mapPane">
+        <tool id="GEtools_OpenInMaps" caption="OpenInMaps" className="OpenInMaps" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/location-pin.png" largeImage="pack://application:,,,/GEtools;component/Images/location-pin.png" condition="esri_mapping_mapPane">
           <tooltip heading="Open in Google Maps">
 						Opens the location of mouse click in browser on Google Maps<disabledText /></tooltip>
         </tool>
-        <tool id="GEtools_OpenInStreet" caption="OpenInStreet" className="OpenInStreet" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/street-view.png" largeImage="pack://application:,,,/GEtools;;component/Images/street-view.png" condition="esri_mapping_mapPane">
+        <tool id="GEtools_OpenInStreet" caption="OpenInStreet" className="OpenInStreet" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/street-view.png" largeImage="pack://application:,,,/GEtools;component/Images/street-view.png" condition="esri_mapping_mapPane">
           <tooltip heading="Open In Google Street View">
 						Opens the location of mouse click in browser with Street View on Google Maps<disabledText /></tooltip>
         </tool>
-        <button id="GEtools_SyncGE" caption="SyncToGE" className="SyncGE" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/sync-icon.png" largeImage="pack://application:,,,/GEtools;;component/Images/sync-icon.png">
+        <button id="GEtools_SyncGE" caption="SyncToGE" className="SyncGE" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/sync-icon.png" largeImage="pack://application:,,,/GEtools;component/Images/sync-icon.png">
           <tooltip heading="SyncToGE">
 						Syncs ArcGIS Pro map with Google Earth Pro<disabledText /></tooltip>
         </button>
