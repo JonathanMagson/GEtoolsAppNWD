@@ -26,8 +26,6 @@ For this feature to work correctly you need to change GE settings: Go to Tools >
 
 **OpenInStreet:** OpenInStreet provides a convenient way to view the location of a mouse click in a web browser using Google Street View. Click on the map at the desired location, and the tool will open Google Street View in your default browser with the clicked location.
 
-**Toggle NVDI:** Toggle NVDI allows you to quickly switch the display of the NVDI layer on and off. Ensure you have a layer named 'NVDI' in the map's layer panel to use this feature.
-
 **Usage**
 1. download 'GEtools.esriAddinX'
 2. run the .esriAddinX file and install addon
