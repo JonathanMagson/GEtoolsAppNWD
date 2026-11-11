@@ -23,6 +23,7 @@
               an empty group-->
         <group id="GEtools_Group1" caption="GEtools" appearsOnAddInTab="true">
           <!-- host controls within groups -->
+          <comboBox refID="GEtools_EarthMode" />
           <tool refID="GEtools_OpenInGE" size="large" />
           <button refID="GEtools_SyncGE" size="large" />
           <button refID="GEtools_LayerToGE" size="large" />
@@ -32,13 +33,17 @@
       </groups>
       <controls>
         <!-- Add your existing controls here -->
+        <comboBox id="GEtools_EarthMode" caption="Google Earth" className="EarthModeComboBox" itemWidth="130" extendedCaption="Choose Google Earth Web or Google Earth Pro" isEditable="false" isReadOnly="true" resizable="true">
+          <tooltip heading="Google Earth Web or Pro">
+						Choose which Google Earth the OpenInGE, SyncToGE and LayerToGE buttons use: Google Earth Web (in a Chrome or Edge window, no install needed) or the Google Earth Pro desktop app.<disabledText /></tooltip>
+        </comboBox>
         <tool id="GEtools_OpenInGE" caption="OpenInGE" className="OpenInGE" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/icon.png" largeImage="pack://application:,,,/GEtools;component/Images/icon.png">
-          <tooltip heading="Open In Google Earth Pro">
-						Opens the location of mouse click in Google Earth Pro.<disabledText /></tooltip>
+          <tooltip heading="Open In Google Earth">
+						Opens the location of mouse click in Google Earth (Web or Pro, as chosen in the Google Earth drop-down).<disabledText /></tooltip>
         </tool>
         <button id="GEtools_LayerToGE" caption="LayerToGE" className="LayerToGE" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/earth_icon.png" largeImage="pack://application:,,,/GEtools;component/Images/earth_icon.png">
           <tooltip heading="Layer to GE">
-						Opens a feature class in Google Earth Pro<disabledText /></tooltip>
+						Opens the feature layer selected in Contents in Google Earth (Web or Pro, as chosen in the Google Earth drop-down)<disabledText /></tooltip>
         </button>
         <tool id="GEtools_OpenInMaps" caption="OpenInMaps" className="OpenInMaps" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/location-pin.png" largeImage="pack://application:,,,/GEtools;component/Images/location-pin.png" condition="esri_mapping_mapPane">
           <tooltip heading="Open in Google Maps">
@@ -50,11 +55,11 @@
         </tool>
         <button id="GEtools_SyncGE" caption="SyncToGE" className="SyncGE" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/sync-icon.png" largeImage="pack://application:,,,/GEtools;component/Images/sync-icon.png">
           <tooltip heading="SyncToGE">
-						Syncs ArcGIS Pro map with Google Earth Pro<disabledText /></tooltip>
+						Syncs ArcGIS Pro map with Google Earth (Web or Pro, as chosen in the Google Earth drop-down)<disabledText /></tooltip>
         </button>
         <button id="GEtools_OpenInGEcontext" caption="OpenInGE" className="OpenInGEcontext" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/icon.png" largeImage="pack://application:,,,/GEtools;component/Images/icon.png">
-          <tooltip heading="Open In Google Earth Pro">
-			  Opens the location of mouse click in Google Earth Pro.<disabledText /></tooltip>
+          <tooltip heading="Open In Google Earth">
+			  Opens the location of mouse click in Google Earth (Web or Pro, as chosen in the Google Earth drop-down).<disabledText /></tooltip>
         </button>
         <button id="GEtools_OpenInMapsContext" caption="OpenInMaps" className="OpenInMapsContext" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/location-pin.png" largeImage="pack://application:,,,/GEtools;component/Images/location-pin.png">
           <tooltip heading="Open in Google Maps">

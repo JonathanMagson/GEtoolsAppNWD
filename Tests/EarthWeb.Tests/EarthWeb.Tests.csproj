@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    Tests for the parts of GEtools that don't need ArcGIS Pro: the Google
+    Earth Web URLs and the browser (DevTools) driver. Runs on any OS:
+      dotnet test Tests/EarthWeb.Tests
+    The live browser test runs when GETOOLS_TEST_BROWSER points at a Chrome,
+    Edge or Chromium executable.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>GEtools.Tests</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\ProAppModule1\EarthWeb\*.cs" Link="EarthWeb\%(Filename)%(Extension)" />
+    <Compile Include="..\..\ProAppModule1\EarthSettings.cs" Link="EarthSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+</Project>

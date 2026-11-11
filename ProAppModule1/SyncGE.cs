@@ -19,6 +19,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace GEtools
@@ -39,41 +40,33 @@ namespace GEtools
 
         #region Button 
 
+        // Which Google Earth this sync session drives (fixed when it starts)
+        private EarthMode _activeMode;
+
+        // Google Earth Web: wait for the map to settle before following it
+        private CancellationTokenSource _webDebounce;
+
         private SyncGE()
         {
             _saveDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), @"AP2GE\");
+
+            // Switching between Google Earth Web and Pro ends the current sync.
+            EarthSettings.ModeChanged += mode => EarthWebActions.RunOnUi(() =>
+            {
+                if (this.IsChecked && mode != _activeMode)
+                    Deactivate();
+            });
         }
 
         protected override void OnClick()
         {
             if (this.IsChecked)
             {
-                MapViewCameraChangedEvent.Unsubscribe(MapViewCameraCanged);
-                this.IsChecked = false;
-                this.Caption = "Activate";
-
-                try
-                {
-                    string currentViewFile = Path.Combine(_saveDirectory, _currentViewFileName);
-
-                    if (File.Exists(currentViewFile))
-                    {
-                        File.Delete(currentViewFile);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Deactivation Failed...\n" + ex.Message);
-                }
-
+                Deactivate();
             }
             else
             {
-                MapViewCameraChangedEvent.Subscribe(MapViewCameraCanged, false);
-                WriteCurrentView();
-                WriteNetworkLink();
-                this.IsChecked = true;
-                this.Caption = "Deactivate";
+                Activate();
             }
         }
 
@@ -81,15 +74,127 @@ namespace GEtools
 
         #region Methods
 
+        private void Activate()
+        {
+            _activeMode = EarthSettings.Mode;
+            MapViewCameraChangedEvent.Subscribe(MapViewCameraCanged, false);
+            this.IsChecked = true;
+            this.Caption = "Deactivate";
+
+            if (_activeMode == EarthMode.Web)
+            {
+                _ = StartWebSyncAsync();
+            }
+            else
+            {
+                WriteCurrentView();
+                WriteNetworkLink();
+            }
+        }
+
+        private void Deactivate()
+        {
+            MapViewCameraChangedEvent.Unsubscribe(MapViewCameraCanged);
+            _webDebounce?.Cancel();
+            this.IsChecked = false;
+            this.Caption = "Activate";
+
+            if (_activeMode == EarthMode.Web)
+            {
+                // The Google Earth Web window stays open; it just stops following.
+                return;
+            }
+
+            try
+            {
+                string currentViewFile = Path.Combine(_saveDirectory, _currentViewFileName);
+
+                if (File.Exists(currentViewFile))
+                {
+                    File.Delete(currentViewFile);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Deactivation Failed...\n" + ex.Message);
+            }
+        }
+
         private void MapViewCameraCanged(MapViewCameraChangedEventArgs args)
         {
             MapView mapView = args.MapView;
 
             if (mapView != null)
             {
-                SyncViews(mapView);
+                if (_activeMode == EarthMode.Web)
+                    QueueWebSync(mapView);
+                else
+                    SyncViews(mapView);
             }
         }
+
+        #region Google Earth Web
+
+        private async Task StartWebSyncAsync()
+        {
+            var mapView = MapView.Active;
+            if (mapView == null)
+            {
+                MessageBox.Show("Open a map view first.", "SyncToGE");
+                Deactivate();
+                return;
+            }
+            await SyncWebAsync(mapView, launch: true);
+        }
+
+        // The camera changes many times a second while panning; only move
+        // Google Earth once the map has been still for the sync delay.
+        private void QueueWebSync(MapView mapView)
+        {
+            _webDebounce?.Cancel();
+            var cts = _webDebounce = new CancellationTokenSource();
+            _ = Task.Run(async () =>
+            {
+                try
+                {
+                    await Task.Delay(EarthSettings.SyncDelayMs, cts.Token);
+                }
+                catch (TaskCanceledException)
+                {
+                    return; // the map moved again
+                }
+                await SyncWebAsync(mapView, launch: false);
+            });
+        }
+
+        private async Task SyncWebAsync(MapView mapView, bool launch)
+        {
+            EarthWeb.EarthWebResult result;
+            try
+            {
+                result = await EarthWebActions.SyncViewAsync(mapView, launch);
+            }
+            catch (Exception ex)
+            {
+                result = EarthWeb.EarthWebResult.Failed;
+                EarthWebActions.Notify("SyncToGE", ex.Message);
+            }
+            if (result == EarthWeb.EarthWebResult.Ok)
+                return;
+
+            EarthWebActions.RunOnUi(() =>
+            {
+                if (!this.IsChecked || _activeMode != EarthMode.Web)
+                    return;
+                Deactivate();
+                if (result == EarthWeb.EarthWebResult.Closed)
+                    EarthWebActions.Notify("SyncToGE", "SyncToGE turned off: the Google Earth window was closed.");
+                else if (result == EarthWeb.EarthWebResult.Failed)
+                    EarthWebActions.Notify("SyncToGE", "SyncToGE turned off: " + EarthWeb.EarthWebWindow.Instance.LastError);
+            });
+        }
+
+        #endregion
 
         private async void SyncViews(MapView mapView)
         {

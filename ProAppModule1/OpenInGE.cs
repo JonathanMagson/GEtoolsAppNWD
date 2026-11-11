@@ -26,23 +26,25 @@ namespace GEtools
                 e.Handled = true;
         }
 
-        protected override Task HandleMouseDownAsync(MapViewMouseButtonEventArgs e)
+        protected override async Task HandleMouseDownAsync(MapViewMouseButtonEventArgs e)
         {
-            return QueuedTask.Run(() =>
+            var mapView = ActiveMapView;
+            var coords = await QueuedTask.Run(() => EarthWebActions.ToWgs84(mapView.ClientToMap(e.ClientPoint)));
+            if (coords == null) return;
+
+            if (EarthSettings.Mode == EarthMode.Web)
             {
-                var mapPoint = ActiveMapView.ClientToMap(e.ClientPoint);
-                var coords = GeometryEngine.Instance.Project(mapPoint, SpatialReferences.WGS84) as MapPoint;
-                if (coords == null) return;
-
-                // Save the coordinates as KML file
+                // Google Earth Web, marked with a red X
+                await EarthWebActions.OpenPointAsync(coords.Y, coords.X);
+            }
+            else
+            {
+                // Google Earth Pro: save the coordinates as a KML file and open it
                 SaveCoordinatesAsKml(coords.Y, coords.X);
+            }
 
-                // Activate the Explore tool
-                FrameworkApplication.SetCurrentToolAsync("esri_mapping_exploreTool");
-
-
-            });
-
+            // Activate the Explore tool
+            await FrameworkApplication.SetCurrentToolAsync("esri_mapping_exploreTool");
         }
 
         public void SaveCoordinatesAsKml(double latitude, double longitude)

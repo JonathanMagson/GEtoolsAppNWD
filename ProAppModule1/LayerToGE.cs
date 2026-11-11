@@ -24,9 +24,23 @@ namespace GEtools
 {
     internal class LayerToGE : Button
     {
-        protected override void OnClick()
+        protected override async void OnClick()
         {
+            if (EarthSettings.Mode == EarthMode.Web)
+            {
+                // Google Earth Web: export the selected layer and drop it on the Earth window
+                try
+                {
+                    await EarthWebActions.SendLayerAsync();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"LayerToGE failed:\n{ex.Message}", "LayerToGE");
+                }
+                return;
+            }
 
+            // Google Earth Pro: run the toolbox tool, which opens the KML in Google Earth Pro
             string installPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             string toolboxPath = Path.Combine(installPath, "FCtoKML.pyt\\LayerToKMLTool");
             
