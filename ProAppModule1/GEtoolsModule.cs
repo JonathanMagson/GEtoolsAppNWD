@@ -38,6 +38,7 @@ namespace GEtools
         {
             //TODO - add your business logic
             //return false to ~cancel~ Application close
+            BackgroundCursorService.Stop();
             return true;
         }
 

@@ -14,20 +14,22 @@
     <insertModule id="GEtoolsModule" className="GEtoolsModule" autoLoad="true" caption="GEtools">
       <!-- uncomment to have the control hosted on a separate tab-->
       <tabs>
-        <!--<tab id="ProAppModule1_Tab1" caption="New Tab">
-          <group refID="ProAppModule1_Group1"/>
-        </tab>-->
+        <tab id="GEtools_MainTab" caption="GEtools">
+          <group refID="GEtools_Group1" />
+        </tab>
       </tabs>
       <groups>
         <!-- comment this out if you have no controls on the Addin tab to avoid
               an empty group-->
-        <group id="GEtools_Group1" caption="GEtools" appearsOnAddInTab="true">
+        <group id="GEtools_Group1" caption="GEtools">
           <!-- host controls within groups -->
           <tool refID="GEtools_OpenInGE" size="large" />
           <button refID="GEtools_SyncGE" size="large" />
+          <button refID="GEtools_SyncCursor" size="large" />
           <button refID="GEtools_LayerToGE" size="large" />
           <tool refID="GEtools_OpenInMaps" size="large" />
           <tool refID="GEtools_OpenInStreet" size="large" />
+          <button refID="GEtools_ToggleNVDI" size="large" />
         </group>
       </groups>
       <controls>
@@ -48,6 +50,9 @@
           <tooltip heading="Open In Google Street View">
 						Opens the location of mouse click in browser with Street View on Google Maps<disabledText /></tooltip>
         </tool>
+        <button id="GEtools_SyncCursor" caption="Sync Cursor" className="SyncCursor" loadOnClick="true" condition="esri_mapping_mapPane" smallImage="pack://application:,,,/GEtools;component/Images/cursor-sync-small.png" largeImage="pack://application:,,,/GEtools;component/Images/cursor-sync.png">
+          <tooltip heading="Sync Cursor">Displays the ArcGIS Pro cursor in Google Earth Pro.<disabledText /></tooltip>
+        </button>
         <button id="GEtools_SyncGE" caption="SyncToGE" className="SyncGE" loadOnClick="true" smallImage="pack://application:,,,/GEtools;component/Images/sync-icon.png" largeImage="pack://application:,,,/GEtools;component/Images/sync-icon.png">
           <tooltip heading="SyncToGE">
 						Syncs ArcGIS Pro map with Google Earth Pro<disabledText /></tooltip>
